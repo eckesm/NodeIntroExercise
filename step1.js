@@ -4,7 +4,7 @@ const argv = process.argv;
 function cat(path) {
 	fs.readFile(path, 'utf8', (err, data) => {
 		if (err) {
-			console.log(`Error reading ${argv[2]}:\n`, err);
+			console.log(`Error reading ${path}:\n${err}`);
 			process.kill(1);
 		}
 		else {
