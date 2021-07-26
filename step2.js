@@ -25,9 +25,12 @@ function webCat(url) {
 		});
 }
 
-if (argv[2].startsWith('http://') || argv[2].startsWith('https://')) {
-	webCat(argv[2]);
+let path = argv[2];
+
+// if (path.startsWith('http')) {
+if (path.slice(0, 4) === 'http') {
+	webCat(path);
 }
 else {
-	cat(argv[2]);
+	cat(path);
 }
